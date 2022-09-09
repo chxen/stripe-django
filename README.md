@@ -1,7 +1,7 @@
 # stripe-django
 Настройка платежей Stripe с помощью Django
 
-# Описание запуска
+## Описание запуска
 1) Cклонируйте репозиторий командой: git clone https://github.com/chxen/stripe-django.git
 2) Зайдите в папку cd stripe-django
 3) Создайте виртуальное окружение: python -m venv venv. И активируйте его: source venv/bin/activate
@@ -10,7 +10,7 @@
 6) Запустите проект на сервере: python manage.py runserver
 7) Чтобы получить доступ к панели администратора, создайте суперпользователя: python3 manage.py createsuperuser. Введите необходимые данные и запомните их. Они понадобятся для того, чтобы войти в Django Admin панель. Доступ по ссылке: http://127.0.0.1:8000/admin/. Там можно просмотреть Django Модели.
 
-# Что сделано:
+## Задачи
 - [X] Django Модель Item с полями (name, description, price) Ссылка: http://ksenih.pythonanywhere.com/admin/
 - [X] GET /buy/{id}, c помощью которого можно получить Stripe Session Id для оплаты выбранного Item. При выполнении этого метода c бэкенда с помощью python библиотеки stripe должен выполняться запрос stripe.checkout.Session.create(...) и полученный session.id выдаваться в результате запроса Ссылка: http://ksenih.pythonanywhere.com/buy/1/
 - [X] GET /item/{id}, c помощью которого можно получить простейшую HTML страницу, на которой будет информация о выбранном Item и кнопка Buy. По нажатию на кнопку Buy должен происходить запрос на /buy/{id}, получение session_id и далее  с помощью JS библиотеки Stripe происходить редирект на Checkout форму stripe.redirectToCheckout(sessionId=session_id) Ссылка: http://ksenih.pythonanywhere.com/item/3/
