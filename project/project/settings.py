@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-@b03ty#1^ey&5lt_rcnmqr_-sb6kg9(ivan-sz&p_(io)n%wgb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ksenih.pythonanywhere.com',]
 
 
 # Application definition
@@ -118,6 +118,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_URL = '/media/'
+STATIC_ROOT = '/home/ksenih/static'
+MEDIA_ROOT = '/home/ksenih/media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
